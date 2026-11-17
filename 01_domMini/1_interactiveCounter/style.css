@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -22,12 +23,57 @@ body {
   min-height: 100svh;
 
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 28px;
+  padding: 20px;
+  background: conic-gradient(
+    from 145deg at 15% 20%,
+    #071c18,
+    #080817,
+    #21091e,
+    #080817,
+    #071c18
+  );
 
-  padding: 16px;
+  background-color: #03040b;
 }
+/* #page-title {
+  font-family: "Orbitron", sans-serif;
+  font-size: clamp(1.5rem, 5vw, 2.8rem);
+  font-weight: 700;
+  color: whitesmoke;
+  text-align: center;
+  letter-spacing: clamp(1px, 0.5vw, 4px);
+  text-shadow:
+    0 0 10px rgba(255, 255, 255, 0.4),
+    0 0 25px rgba(130, 100, 255, 0.5);
+} */
+#page-title {
+  font-family: "Orbitron", sans-serif;
+  font-size: clamp(1.5rem, 5vw, 2.8rem);
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: clamp(1px, 0.5vw, 4px);
 
+  background: linear-gradient(
+    90deg,
+    #fff176,
+    #ffb300,
+    #ff5722,
+    #ff1744,
+    #ffb300,
+    #fff176
+  );
+
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+
+  filter: drop-shadow(0 0 10px rgba(255, 100, 0, 0.45));
+}
 #main-container {
   width: 100%;
   max-width: 480px;
@@ -126,4 +172,45 @@ button:focus-visible,
 input:focus-visible {
   outline: 3px solid white;
   outline-offset: 3px;
+}
+
+body {
+  position: relative;
+  isolation: isolate;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background-repeat: no-repeat;
+}
+
+/* Small stars */
+body::before {
+  background-image:
+    radial-gradient(2px 2px at 10% 20%, white 99%, transparent),
+    radial-gradient(1px 1px at 25% 75%, white 99%, transparent),
+    radial-gradient(2px 2px at 40% 35%, white 99%, transparent),
+    radial-gradient(1px 1px at 55% 85%, white 99%, transparent),
+    radial-gradient(2px 2px at 70% 15%, white 99%, transparent),
+    radial-gradient(1px 1px at 85% 55%, white 99%, transparent),
+    radial-gradient(2px 2px at 95% 90%, white 99%, transparent),
+    radial-gradient(1px 1px at 15% 90%, white 99%, transparent),
+    radial-gradient(1px 1px at 65% 45%, white 99%, transparent),
+    radial-gradient(2px 2px at 90% 25%, white 99%, transparent);
+}
+
+/* Additional tiny coloured stars */
+body::after {
+  background-image:
+    radial-gradient(1px 1px at 20% 45%, #5affb5 99%, transparent),
+    radial-gradient(2px 2px at 35% 10%, #ff65ce 99%, transparent),
+    radial-gradient(1px 1px at 50% 55%, #7daaff 99%, transparent),
+    radial-gradient(2px 2px at 75% 80%, #ffffff 99%, transparent),
+    radial-gradient(1px 1px at 92% 65%, #c18aff 99%, transparent),
+    radial-gradient(1px 1px at 5% 65%, #ffffff 99%, transparent);
 }
