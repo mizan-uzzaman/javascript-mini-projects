@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="script.js"></script>
+  </head>
+  <body>
+    <h1>Random Color Generator</h1>
+
+    <div class="Container-1">
+      <button id="generate-btn">Generate Color</button>
+
+      <p id="color-code">#FFFFFF</p>
+      <button id="copy-btn" title="Copy color code">
+        <i class="fa-regular fa-copy"></i>
+      </button>
+
+      <select id="color-format">
+        <option value="rgb">RGB</option>
+        <option value="hex" selected>HEX</option>
+        <!-- <option value="hsl">HSL</option> -->
+      </select>
+    </div>
+    <div class="Container-2">
+      <label for="custom-color">Pick your own color</label>
+      <input type="color" id="custom-color" />
+    </div>
+  </body>
+</html>
