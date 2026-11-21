@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="script.js"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+    </style>
+  </head>
+  <body>
+    <h1 class="heading">Character Counter</h1>
+
+    <main class="container">
+      <div class="textarea-wrapper">
+        <textarea
+          id="textInput"
+          placeholder="Enter your thoughts... "
+          maxlength="280"
+        ></textarea>
+        <!-- maxlength="280" removed due to logic mismatch from js  -->
+
+        <span id="remainingCount">0/280</span>
+      </div>
+      <div class="counter-info">
+        <p id="charCount">Characters: 0</p>
+        <p id="wordCount">Words: 0</p>
+      </div>
+
+      <div id="progressBar">
+        <div id="progressFill"></div>
+      </div>
+
+      <button id="clearBtn">Clear All</button>
+    </main>
+  </body>
+</html>
